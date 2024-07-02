@@ -1,0 +1,106 @@
+{
+  "id": "lots",
+  "type": "SharedSlice",
+  "name": "Lots",
+  "description": "Lots",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "description2": {
+          "type": "Text",
+          "config": {
+            "label": "Description2",
+            "placeholder": ""
+          }
+        },
+        "grouplots": {
+          "type": "Group",
+          "config": {
+            "label": "GroupLots",
+            "repeat": true,
+            "fields": {
+              "subtittle": {
+                "type": "Text",
+                "config": {
+                  "label": "Subtittle",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              },
+              "linkbutton": {
+                "type": "Link",
+                "config": {
+                  "label": "LinkButton",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "labelbutton": {
+                "type": "Text",
+                "config": {
+                  "label": "LabelButton",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "linkbutton": {
+          "type": "Link",
+          "config": {
+            "label": "LinkButton",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelbutton": {
+          "type": "Text",
+          "config": {
+            "label": "LabelButton",
+            "placeholder": ""
+          }
+        },
+        "imagelots": {
+          "type": "Image",
+          "config": {
+            "label": "ImageLots",
+            "constraint": {
+              "width": 752,
+              "height": 592
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

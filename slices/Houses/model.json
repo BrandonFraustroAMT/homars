@@ -1,0 +1,198 @@
+{
+  "id": "houses",
+  "type": "SharedSlice",
+  "name": "Houses",
+  "description": "Houses",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "subtittle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtittle",
+            "placeholder": ""
+          }
+        },
+        "groupbuttons": {
+          "type": "Group",
+          "config": {
+            "label": "GroupButtons",
+            "repeat": true,
+            "fields": {
+              "activebutton": {
+                "type": "Boolean",
+                "config": {
+                  "label": "ActiveButton",
+                  "default_value": false,
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "labelbutton": {
+                "type": "Text",
+                "config": {
+                  "label": "LabelButton",
+                  "placeholder": ""
+                }
+              },
+              "image1": {
+                "type": "Image",
+                "config": {
+                  "label": "Image1",
+                  "constraint": {
+                    "width": 691,
+                    "height": 461
+                  },
+                  "thumbnails": []
+                }
+              },
+              "image2": {
+                "type": "Image",
+                "config": {
+                  "label": "Image2",
+                  "constraint": {
+                    "width": 691,
+                    "height": 461
+                  },
+                  "thumbnails": []
+                }
+              },
+              "image3": {
+                "type": "Image",
+                "config": {
+                  "label": "Image3",
+                  "constraint": {
+                    "width": 691,
+                    "height": 461
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "groupfirstsection": {
+          "type": "Group",
+          "config": {
+            "label": "GroupFirstSection",
+            "repeat": true,
+            "fields": {
+              "label1": {
+                "type": "Text",
+                "config": {
+                  "label": "Label1",
+                  "placeholder": ""
+                }
+              },
+              "label2": {
+                "type": "Text",
+                "config": {
+                  "label": "Label2",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "firstfloor": {
+          "type": "Text",
+          "config": {
+            "label": "FirstFloor",
+            "placeholder": ""
+          }
+        },
+        "groupfirstfloor": {
+          "type": "Group",
+          "config": {
+            "label": "GroupFirstFloor",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "secondfloor": {
+          "type": "Text",
+          "config": {
+            "label": "SecondFloor",
+            "placeholder": ""
+          }
+        },
+        "groupsecondfloor": {
+          "type": "Group",
+          "config": {
+            "label": "GroupSecondFloor",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "pricetext": {
+          "type": "Text",
+          "config": {
+            "label": "PriceText",
+            "placeholder": ""
+          }
+        },
+        "pricenumber": {
+          "type": "Text",
+          "config": {
+            "label": "PriceNumber",
+            "placeholder": ""
+          }
+        },
+        "pricedescription": {
+          "type": "Text",
+          "config": {
+            "label": "PriceDescription",
+            "placeholder": ""
+          }
+        },
+        "linkbutton": {
+          "type": "Link",
+          "config": {
+            "label": "LinkButton",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelbutton": {
+          "type": "Text",
+          "config": {
+            "label": "LabelButton",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

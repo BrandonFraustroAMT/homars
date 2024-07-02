@@ -1,0 +1,77 @@
+{
+  "id": "navigation",
+  "type": "SharedSlice",
+  "name": "Navigation",
+  "description": "Navigation",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "linklogo": {
+          "type": "Link",
+          "config": {
+            "label": "LinkLogo",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "imagelogo": {
+          "type": "Image",
+          "config": {
+            "label": "ImageLogo",
+            "constraint": {
+              "width": 125,
+              "height": 60
+            },
+            "thumbnails": []
+          }
+        },
+        "groupsection": {
+          "type": "Group",
+          "config": {
+            "label": "GroupSection",
+            "repeat": true,
+            "fields": {
+              "linklabel": {
+                "type": "Link",
+                "config": {
+                  "label": "LinkLabel",
+                  "placeholder": "",
+                  "select": null
+                }
+              },
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "linkbutton": {
+          "type": "Link",
+          "config": {
+            "label": "LinkButton",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelbutton": {
+          "type": "Text",
+          "config": {
+            "label": "LabelButton",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

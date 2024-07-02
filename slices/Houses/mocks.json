@@ -1,0 +1,225 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"tittle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Occaecat ad anim et ut incididunt laboris irure veniam. Minim et occaecat velit aliqua voluptate sit voluptate tempor anim pariatur esse anim voluptate. Velit mollit cupidatat nostrud eiusmod ullamco anim dolor tempor id."
+						}
+					}
+				]
+			},
+			"groupbuttons": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"activebutton",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"labelbutton",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "smoke",
+									"type": "Text"
+								}
+							],
+							[
+								"image1",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+										"width": 5243,
+										"height": 3495
+									},
+									"url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?rect=2%2C0%2C5239%2C3495&w=691&h=461",
+									"width": 691,
+									"height": 461,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 2,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"image2",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+										"width": 2747,
+										"height": 4120
+									},
+									"url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa?rect=0%2C1144%2C2747%2C1833&w=691&h=461",
+									"width": 691,
+									"height": 461,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 1144
+										},
+										"background": "transparent"
+									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							],
+							[
+								"image3",
+								{
+									"__TYPE__": "ImageContent",
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+										"width": 4000,
+										"height": 4000
+									},
+									"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?rect=0%2C666%2C4000%2C2669&w=691&h=461",
+									"width": 691,
+									"height": 461,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 666
+										},
+										"background": "transparent"
+									},
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			},
+			"subtittle": {
+				"__TYPE__": "FieldContent",
+				"value": "coat",
+				"type": "Text"
+			},
+			"groupfirstsection": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label1",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "suggest",
+									"type": "Text"
+								}
+							],
+							[
+								"label2",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "escape",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"firstfloor": {
+				"__TYPE__": "FieldContent",
+				"value": "minerals",
+				"type": "Text"
+			},
+			"groupfirstfloor": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "pine",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"secondfloor": {
+				"__TYPE__": "FieldContent",
+				"value": "century",
+				"type": "Text"
+			},
+			"groupsecondfloor": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "office",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"pricetext": {
+				"__TYPE__": "FieldContent",
+				"value": "earth",
+				"type": "Text"
+			},
+			"pricenumber": {
+				"__TYPE__": "FieldContent",
+				"value": "creature",
+				"type": "Text"
+			},
+			"pricedescription": {
+				"__TYPE__": "FieldContent",
+				"value": "view",
+				"type": "Text"
+			},
+			"linkbutton": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"labelbutton": {
+				"__TYPE__": "FieldContent",
+				"value": "yard",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

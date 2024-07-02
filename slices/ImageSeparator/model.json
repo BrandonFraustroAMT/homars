@@ -1,0 +1,30 @@
+{
+  "id": "image_separator",
+  "type": "SharedSlice",
+  "name": "ImageSeparator",
+  "description": "ImageSeparator",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {
+              "width": 1296,
+              "height": 683
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

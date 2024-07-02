@@ -1,0 +1,211 @@
+{
+  "id": "ubication",
+  "type": "SharedSlice",
+  "name": "Ubication",
+  "description": "Ubication",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "subtittle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtittle",
+            "placeholder": ""
+          }
+        },
+        "listone": {
+          "type": "Text",
+          "config": {
+            "label": "ListOne",
+            "placeholder": ""
+          }
+        },
+        "grouplistone": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListOne",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "listtwo": {
+          "type": "Text",
+          "config": {
+            "label": "ListTwo",
+            "placeholder": ""
+          }
+        },
+        "grouplisttwo": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListTwo",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "listthree": {
+          "type": "Text",
+          "config": {
+            "label": "ListThree",
+            "placeholder": ""
+          }
+        },
+        "grouplistthree": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListThree",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "listfour": {
+          "type": "Text",
+          "config": {
+            "label": "ListFour",
+            "placeholder": ""
+          }
+        },
+        "grouplistfour": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListFour",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "listfive": {
+          "type": "Text",
+          "config": {
+            "label": "ListFive",
+            "placeholder": ""
+          }
+        },
+        "grouplistfive": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListFive",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "listsix": {
+          "type": "Text",
+          "config": {
+            "label": "ListSix",
+            "placeholder": ""
+          }
+        },
+        "grouplistsix": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListSix",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "listseven": {
+          "type": "Text",
+          "config": {
+            "label": "ListSeven",
+            "placeholder": ""
+          }
+        },
+        "grouplistseven": {
+          "type": "Group",
+          "config": {
+            "label": "GroupListSeven",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "linkbutton": {
+          "type": "Link",
+          "config": {
+            "label": "LinkButton",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelbutton": {
+          "type": "Text",
+          "config": {
+            "label": "LabelButton",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

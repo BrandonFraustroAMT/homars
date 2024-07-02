@@ -1,0 +1,88 @@
+{
+  "id": "amenities",
+  "type": "SharedSlice",
+  "name": "Amenities",
+  "description": "Amenities",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "groupamenities": {
+          "type": "Group",
+          "config": {
+            "label": "GroupAmenities",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              },
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {
+                    "width": 140,
+                    "height": 140
+                  },
+                  "thumbnails": []
+                }
+              }
+            }
+          }
+        },
+        "subtittle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtittle",
+            "placeholder": ""
+          }
+        },
+        "imageamenitie": {
+          "type": "Image",
+          "config": {
+            "label": "ImageAmenitie",
+            "constraint": {
+              "width": 1296,
+              "height": 864
+            },
+            "thumbnails": []
+          }
+        },
+        "linkbutton": {
+          "type": "Link",
+          "config": {
+            "label": "LinkButton",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelbutton": {
+          "type": "Text",
+          "config": {
+            "label": "LabelButton",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

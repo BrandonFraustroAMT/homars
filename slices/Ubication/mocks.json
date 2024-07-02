@@ -1,0 +1,198 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"tittle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Commodo non occaecat labore Lorem dolor elit dolore ad magna eu adipisicing esse voluptate consectetur velit."
+						}
+					}
+				]
+			},
+			"subtittle": {
+				"__TYPE__": "FieldContent",
+				"value": "event",
+				"type": "Text"
+			},
+			"listone": {
+				"__TYPE__": "FieldContent",
+				"value": "broke",
+				"type": "Text"
+			},
+			"grouplistone": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "collect",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"listtwo": {
+				"__TYPE__": "FieldContent",
+				"value": "parts",
+				"type": "Text"
+			},
+			"grouplisttwo": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "tales",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"listthree": {
+				"__TYPE__": "FieldContent",
+				"value": "know",
+				"type": "Text"
+			},
+			"grouplistthree": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "than",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"listfour": {
+				"__TYPE__": "FieldContent",
+				"value": "write",
+				"type": "Text"
+			},
+			"grouplistfour": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "doll",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"listfive": {
+				"__TYPE__": "FieldContent",
+				"value": "weigh",
+				"type": "Text"
+			},
+			"grouplistfive": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "person",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"listsix": {
+				"__TYPE__": "FieldContent",
+				"value": "stairs",
+				"type": "Text"
+			},
+			"grouplistsix": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "salt",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"listseven": {
+				"__TYPE__": "FieldContent",
+				"value": "fast",
+				"type": "Text"
+			},
+			"grouplistseven": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "baby",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"linkbutton": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"labelbutton": {
+				"__TYPE__": "FieldContent",
+				"value": "independent",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

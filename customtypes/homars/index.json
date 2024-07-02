@@ -1,0 +1,92 @@
+{
+  "format": "page",
+  "id": "homars",
+  "label": "Homars",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "id",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "separator": {
+              "type": "SharedSlice"
+            },
+            "video": {
+              "type": "SharedSlice"
+            },
+            "ubication": {
+              "type": "SharedSlice"
+            },
+            "lots": {
+              "type": "SharedSlice"
+            },
+            "image_separator": {
+              "type": "SharedSlice"
+            },
+            "houses": {
+              "type": "SharedSlice"
+            },
+            "galery": {
+              "type": "SharedSlice"
+            },
+            "diferentiators": {
+              "type": "SharedSlice"
+            },
+            "contact": {
+              "type": "SharedSlice"
+            },
+            "concept": {
+              "type": "SharedSlice"
+            },
+            "amenities": {
+              "type": "SharedSlice"
+            },
+            "navigation": {
+              "type": "SharedSlice"
+            },
+            "header": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata Main": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

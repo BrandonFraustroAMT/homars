@@ -1,0 +1,30 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "slicemachine": "start-slicemachine"
+  },
+  "dependencies": {
+    "@prismicio/client": "^7.6.0",
+    "@prismicio/helpers": "^2.3.9",
+    "@prismicio/react": "^2.8.0",
+    "@prismicio/vue": "^4.2.2",
+    "gsap": "^3.12.5",
+    "nuxt": "^3.12.2",
+    "scrollmagic": "^2.0.8",
+    "vue-intersection-observer": "^0.1.9",
+    "vue-scrollmagic": "^1.2.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/prismic": "^3.3.1",
+    "@slicemachine/adapter-nuxt": "^0.3.42",
+    "@types/scrollmagic": "^2.0.8",
+    "slice-machine-ui": "^2.2.1"
+  }
+}

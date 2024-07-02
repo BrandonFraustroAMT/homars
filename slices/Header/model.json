@@ -1,0 +1,121 @@
+{
+  "id": "header",
+  "type": "SharedSlice",
+  "name": "Header",
+  "description": "Header",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "subtittle": {
+          "type": "Text",
+          "config": {
+            "label": "Subtittle",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "Description",
+            "placeholder": ""
+          }
+        },
+        "linklogo": {
+          "type": "Link",
+          "config": {
+            "label": "LinkLogo",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {
+              "width": 116,
+              "height": 57
+            },
+            "thumbnails": []
+          }
+        },
+        "linkmoreinfo": {
+          "type": "Link",
+          "config": {
+            "label": "LinkMoreInfo",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelmoreinfo": {
+          "type": "Text",
+          "config": {
+            "label": "LabelMoreInfo",
+            "placeholder": ""
+          }
+        },
+        "linkschedulecall": {
+          "type": "Link",
+          "config": {
+            "label": "LinkScheduleCall",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "labelschedulecall": {
+          "type": "Text",
+          "config": {
+            "label": "LabelScheduleCall",
+            "placeholder": ""
+          }
+        },
+        "linkwhatsapp": {
+          "type": "Link",
+          "config": {
+            "label": "LinkWhatsApp",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "iconwhatsapp": {
+          "type": "Image",
+          "config": {
+            "label": "IconWhatsApp",
+            "constraint": {
+              "width": 60,
+              "height": 60
+            },
+            "thumbnails": []
+          }
+        },
+        "backgroundimage": {
+          "type": "Image",
+          "config": {
+            "label": "BackgroundImage",
+            "constraint": {
+              "width": 1437,
+              "height": 800
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

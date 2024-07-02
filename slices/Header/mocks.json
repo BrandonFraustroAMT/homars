@@ -1,0 +1,138 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtittle": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Casas desde $4 MDP y lotes desde $780,000 MXN"
+			},
+			"logo": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab",
+					"width": 12288,
+					"height": 16384
+				},
+				"url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?rect=0%2C5173%2C12288%2C6038&w=116&h=57",
+				"width": 116,
+				"height": 57,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 5173
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"labelmoreinfo": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Más información"
+			},
+			"labelschedulecall": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Agendar llamada"
+			},
+			"linkwhatsapp": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "#"
+				}
+			},
+			"backgroundimage": {
+				"__TYPE__": "ImageContent",
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
+					"width": 3199,
+					"height": 3199
+				},
+				"url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869?rect=0%2C709%2C3199%2C1781&w=1437&h=800",
+				"width": 1437,
+				"height": 800,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 709
+					},
+					"background": "transparent"
+				},
+				"thumbnails": {}
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Zona Country, al norte de Mérida Yucatán"
+			},
+			"iconwhatsapp": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+					"width": 3958,
+					"height": 3958
+				},
+				"url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb?rect=0%2C0%2C3958%2C3958&w=60&h=60",
+				"width": 60,
+				"height": 60,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"credits": null,
+				"alt": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"tittle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "La nueva Mérida",
+							"spans": []
+						},
+						"direction": "ltr"
+					}
+				]
+			},
+			"linklogo": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "#",
+					"target": "_blank"
+				}
+			},
+			"linkmoreinfo": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "#"
+				}
+			},
+			"linkschedulecall": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "#"
+				}
+			}
+		},
+		"items": []
+	}
+]

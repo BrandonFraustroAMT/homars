@@ -1,0 +1,112 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contact",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "groupcontact": {
+          "type": "Group",
+          "config": {
+            "label": "GroupContact",
+            "repeat": true,
+            "fields": {
+              "subtittle": {
+                "type": "Text",
+                "config": {
+                  "label": "Subtittle",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "socialmedia": {
+          "type": "Text",
+          "config": {
+            "label": "SocialMedia",
+            "placeholder": ""
+          }
+        },
+        "groupsocialmedia": {
+          "type": "Group",
+          "config": {
+            "label": "GroupSocialMedia",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "Icon",
+                  "constraint": {
+                    "width": 34,
+                    "height": 34
+                  },
+                  "thumbnails": []
+                }
+              },
+              "linkicon": {
+                "type": "Link",
+                "config": {
+                  "label": "LinkIcon",
+                  "placeholder": "",
+                  "select": null
+                }
+              }
+            }
+          }
+        },
+        "linkprivacy": {
+          "type": "Link",
+          "config": {
+            "label": "LinkPrivacy",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "privacy": {
+          "type": "Text",
+          "config": {
+            "label": "Privacy",
+            "placeholder": ""
+          }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "Logo",
+            "constraint": {
+              "width": 90,
+              "height": 90
+            },
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

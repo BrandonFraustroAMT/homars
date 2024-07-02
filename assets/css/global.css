@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('.&static/fonts/roboto/Roboto-Thin.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --greenButton: #026C5B;
+    --buttonHover: #C8B589;
+    --greenText: #949769;
+    --blueTittle: #005548;
+    --greenButtonBackground: #0d3c35;
+    --greenStrongText: #092e29;
+    --greenBackground: #91a27e;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #F5EADF;
+  color: var(--white);
+}
+  
