@@ -243,11 +243,16 @@ defineProps(
   @media (min-width: 2100px) {
     .header-slice__background{
       z-index: 1;
-      margin-top: -24rem;
+      margin-top: -30rem;
       width: 100%;
     }
     .header-slice__tittle{
       font-size: 3rem;
+    }
+  }
+  @media (min-width: 4100px) {
+    .header-slice__background{
+      margin-top: -40rem;
     }
   }
 
