@@ -1,6 +1,7 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('.&static/fonts/roboto/Roboto-Thin.ttf') format('ttf');
+  font-family: 'Mirage';
+  src: url('.&static/fonts/mirage/MADE Mirage Regular PERSONAL USE.otf') format('otf');
+  
   font-weight: normal;
   font-style: normal;
 }
@@ -18,7 +19,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Mirage', sans-serif;
   background-color: #F5EADF;
   color: var(--white);
 }

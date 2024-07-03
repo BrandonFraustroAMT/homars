@@ -172,6 +172,7 @@ onMounted(async () => {
           </div>
         </form>
       </div>
+      
     </div>
   </section>
 </template>
@@ -205,7 +206,7 @@ onMounted(async () => {
 
   .contact-slice__tittle h2{
     font-size: 4vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: #998d6a;
     font-weight: 200;
     margin-bottom: 10px;
@@ -214,11 +215,11 @@ onMounted(async () => {
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
   }
   .contact-slice__left-col{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -230,15 +231,15 @@ onMounted(async () => {
     color: #998d6a;
     padding: 0;
     margin: 0;
-    font-size: 1.2vw;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-family: 'Mirage', sans-serif;
     font-weight: 200
   }
   .contact-slice__block p{
     color: #fff;
-    font-size: 1.1vw;
+    font-size: 1rem;
     line-height: 1.7;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     font-weight: 200;
   }
   .contact-slice__block-social{
@@ -261,9 +262,9 @@ onMounted(async () => {
   }
   .contact-slice__link-privacy a{
     color: #fff;
-    font-size: 1.1vw;
+    font-size: 1rem;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     font-weight: 200;
     border-bottom: 0px;
     letter-spacing: 0.8px;
@@ -271,7 +272,7 @@ onMounted(async () => {
   }
 
   .contact-slice__right-col{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,7 +286,7 @@ onMounted(async () => {
     margin-bottom: 20px;
     font-size: 1.1vw;
     line-height: 1.7;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
   }
   .contact-slice__form label{
     width: 50%;
@@ -307,7 +308,7 @@ onMounted(async () => {
     line-height: 1.2;
     color: #000 !important;
     font-weight: normal;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     padding: 10px;
   }
   select {
@@ -318,7 +319,7 @@ onMounted(async () => {
     line-height: 1.2;
     color: #000 !important;
     font-weight: normal;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     padding: 10px;
   }
   textarea {
@@ -331,13 +332,13 @@ onMounted(async () => {
   .contact-slice__form-submit{
     font-size: 16px;
     letter-spacing: 0.8px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     background-color: #b5a884 !important;
     border: 1px solid #b5a884;
     border-radius: 10px !important;
     color: #312e28 !important;
     line-height: 1 !important;
-    padding: 18px 40px !important;
+    padding: 10px 35px !important;
     position: relative !important;
     text-align: center !important;
     text-transform: uppercase !important;
@@ -349,5 +350,32 @@ onMounted(async () => {
     background-color: #b4afa1 !important;
     border: 1px solid #b4afa1;
     color: #312e28 !important;
+  }
+
+  @media (min-width: 1100px) {
+    .contact-slice__column2{
+      flex-direction: row;
+    }
+    .contact-slice__left-col{
+      width: 50%;
+    }
+    .contact-slice__right-col{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .contact-slice__form-submit{
+      padding: 18px 40px !important;
+    }
+    .contact-slice__block h3{
+      font-size: 1.2vw;
+    }
+    .contact-slice__block p{
+      font-size: 1.1vw;
+    }
+    .contact-slice__link-privacy a{
+      font-size: 1.1vw;
+    }
   }
 </style>

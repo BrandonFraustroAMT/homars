@@ -161,13 +161,14 @@ onMounted(async () => {
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
   }
   .ubication-slice__left{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
   #triggerUbicationText{
@@ -181,13 +182,13 @@ onMounted(async () => {
   }
 
   .ubication-slice .ubication-slice__left{
-    width: 50%;
-    align-items: flex-start;
+    width: 90%;
+    align-items: center;
   }
   .ubication-slice__title h2{
     color: var(--greenStrongText);
-    font-size: 2.6vw;
-    font-family: 'Roboto', sans-serif;
+    font-size: 3rem;
+    font-family: 'Mirage', sans-serif;
     font-weight: 200;
     letter-spacing: 0.2rem;
     margin-bottom: 10px;
@@ -203,9 +204,9 @@ onMounted(async () => {
   }
   .ubication-slice__richText p{
     margin-bottom: 10px;
-    font-size: 1.1vw;
+    font-size: 1.2rem;
     line-height: 1.7;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
   }
   .ubication-slice__ubications-list{
     display: flex;
@@ -223,8 +224,8 @@ onMounted(async () => {
   }
   .ubication-slice__block-top h4{
     margin-top: 0px;
-    font-size: 1.1vw;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-family: 'Mirage', sans-serif;
     color: #535524;
     margin-bottom: 0;
     font-weight: 400;
@@ -236,7 +237,7 @@ onMounted(async () => {
     margin-top: 5px;
   }
   .ubication-slice__list-data{
-    font-size: 0.8vw;
+    font-size: 1rem;
     font-weight: 200;
     line-height: 1.4;
     color: var(--greenStrongText);
@@ -269,8 +270,8 @@ onMounted(async () => {
     cursor: pointer;
   }
   .ubication-slice__right{
-    width: 50%;
-    padding: 0% 0% 0% 10%;
+    width: 100%;
+    padding: 15% 0% 0% 10%;
   }
   #triggerUbicationMap{
     opacity: 0;
@@ -356,5 +357,35 @@ onMounted(async () => {
     left: 60px;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
     z-index: 1;
+  }
+
+  @media (min-width: 1100px) {
+    .ubication-slice__column{
+      flex-direction: row;
+      align-items: stretch;
+    }
+    .ubication-slice__left{
+      width: 50%;
+    }
+    .ubication-slice .ubication-slice__left{
+      width: 50%;
+      align-items: flex-start;
+    }
+    .ubication-slice__title h2{
+      font-size: 2.6vw;
+    }
+    .ubication-slice__richText p{
+      font-size: 1.1vw;
+    }
+    .ubication-slice__block-top h4{
+      font-size: 1.1vw;
+    }
+    .ubication-slice__list-data{
+      font-size: 0.8vw;
+    }
+    .ubication-slice__right{
+      width: 50%;
+      padding: 0% 0% 0% 10%;
+    }
   }
 </style>

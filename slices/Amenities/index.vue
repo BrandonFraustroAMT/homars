@@ -111,7 +111,7 @@ onMounted(async () => {
   }
   .amenities-slice__title h2{
     font-size: 4vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     letter-spacing: 0.2rem;
     font-weight: 400;
     color: #949769;
@@ -150,7 +150,7 @@ onMounted(async () => {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 33.33%;
+    width: 45%;
   }
   .amenities-slice__amenitie img{
     width: 100%;
@@ -158,11 +158,12 @@ onMounted(async () => {
     max-width: 140px;
   }
   .amenities-slice__amenitie h3{
-    font-size: 0.9vw;
+    font-size: 1rem;
     text-align: center;
     margin-top: 20px;
+    font-weight: 200;
     color: #949769;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     margin-bottom: 10px;
   }
   .amenities-slice__big{
@@ -179,8 +180,8 @@ onMounted(async () => {
   }
   .amenities-slice__big-title h3{
     color: #dbd6c9;
-    font-size: 120px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+    font-family: 'Mirage', sans-serif;
     font-weight: 200;
     line-height: 1;
     text-align: center;
@@ -213,5 +214,21 @@ onMounted(async () => {
   .amenities-slice__contact:hover{
     letter-spacing: 2px;
     cursor: pointer;
+  }
+  @media (min-width: 640px) {
+    .amenities-slice__amenitie{
+      width: 33.33%;
+    }
+  }
+  @media (min-width: 1100px) {
+    .amenities-slice__amenitie{
+      width: 33.33%;
+    }
+    .amenities-slice__amenitie h3{
+      font-size: 0.9vw;
+    }
+    .amenities-slice__big-title h3{
+      font-size: 120px;
+    }
   }
 </style>

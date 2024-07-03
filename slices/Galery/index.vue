@@ -97,11 +97,6 @@ onMounted(async () => {
   </section>
 </template>
 
-<!-- 
-  
-
--->
-
 <style>
   .sectionGallery{
     background-color: #3c3933;
@@ -145,7 +140,7 @@ onMounted(async () => {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: calc(var(--bs-gutter-y) * -1);
     margin-right: calc(var(--bs-gutter-x) * -.5);
     margin-left: calc(var(--bs-gutter-x) * -.5);
@@ -163,12 +158,12 @@ onMounted(async () => {
     margin-top: var(--bs-gutter-y);
   }
   .gallery-slice__selector{
-    padding: 62px 0 0;
-    max-width: 160px;
+    padding: 62px 0 30px;
+    max-width: 100%;
   }
   .gallery-slice__selector h2{
     font-size: 2.8vw;;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     letter-spacing: 0.2rem;
     font-weight: 400;
     margin-bottom: 20px;
@@ -177,7 +172,7 @@ onMounted(async () => {
 
   .gallery-slice__selector-text{
     cursor: pointer;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     font-weight: 100;
     width: 100%;
     padding: 7px;
@@ -224,11 +219,26 @@ onMounted(async () => {
   @media (min-width: 768px) {
     .gallery-slice__col-text{
       flex: 0 0 auto;
-      width: 23.66666667%;
+      width: 20%;
     }
     .gallery-slice__col-image{
       flex: 0 0 auto;
-      width: 81.33333333%;
+      width: 80%;
+    }
+  }
+  @media (min-width: 980px) {
+    .gallery-slice__row{
+      --bs-gutter-x: 1.5rem;
+      --bs-gutter-y: 0;
+      display: flex;
+      flex-direction: row;
+      margin-top: calc(var(--bs-gutter-y) * -1);
+      margin-right: calc(var(--bs-gutter-x) * -.5);
+      margin-left: calc(var(--bs-gutter-x) * -.5);
+    }
+    .gallery-slice__selector{
+      padding: 62px 0 0;
+      max-width: 160px;
     }
   }
 

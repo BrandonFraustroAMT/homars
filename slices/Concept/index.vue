@@ -39,7 +39,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: conceptSliceText.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(conceptSliceText.value, "visible") // add class to reveal
@@ -70,6 +70,9 @@ onMounted(async () => {
         </h1>
     </div>
     <div class="concept-slice__column2 concept-slice__the-concept" >
+      <div id="reveal-concept-image" class="concept-slice__rigthCol" ref="conceptSliceImage">
+        <PrismicImage :field="slice.primary.imageconcept" />
+      </div>
       <div id="reveal-concept-slice"class="concept-slice__leftCol"  ref="conceptSliceText">
         <h2 class="concept-slice__leftCol-subtitle">{{ slice.primary.subtittle }}</h2>
         <div class="concept-slice__richText">
@@ -80,9 +83,7 @@ onMounted(async () => {
           {{ slice.primary.labelbutton }}
         </PrismicLink>
       </div>
-      <div id="reveal-concept-image" class="concept-slice__rigthCol" ref="conceptSliceImage">
-        <PrismicImage :field="slice.primary.imageconcept" />
-      </div>
+      
     </div>
   </section>
 </template>
@@ -121,7 +122,7 @@ onMounted(async () => {
     font-size: 5vw;
     font-weight: 200;
     line-height: 1.2;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: var(--blueTittle);
     text-align: center;
     width: 45%;
@@ -130,21 +131,21 @@ onMounted(async () => {
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
   }
 
   .concept-slice__leftCol{
-    width: 40%;
-    padding: 0% 5%;
+    width: 100%;
+    padding: 5% 5%;
     display: flex;
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
     justify-content: center !important;
   }
   .concept-slice__leftCol-subtitle{
-    font-size: 1.6vw;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-family: 'Mirage', sans-serif;
     font-weight: 400;
     color: var(--greenText);
     margin-bottom: 10px;
@@ -153,10 +154,10 @@ onMounted(async () => {
     padding: 10px 0;
   }
   .concept-slice__richText p {
-    font-size: 1.1vw;
+    font-size: 1rem;
     line-height: 1.7;
     font-weight: 100;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: var(--greenStrongText);
   }
   #reveal-concept-slice{
@@ -207,4 +208,22 @@ onMounted(async () => {
     cursor: pointer;
   }
 
+  @media (min-width: 1100px) {
+    .concept-slice__column2{
+      flex-direction: row;
+    }
+    .concept-slice__leftCol{
+      width: 40%;
+      padding: 0% 5%;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: center !important;
+    }
+    .concept-slice__leftCol-subtitle{
+      font-size: 1.6vw;
+    }
+    .concept-slice__richText p {
+      font-size: 1.1vw;
+    }
+  }
 </style>

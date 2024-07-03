@@ -107,9 +107,7 @@ defineProps(
   }
 
   .header-slice__schedule{
-    position: absolute;
-    top: 30px;
-    right: 50px;
+    display: none;
   }
 
   .header-slice__schedule-button{
@@ -130,7 +128,7 @@ defineProps(
     color: var(--white);
     text-align: center;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1;
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
     opacity: 1;
@@ -146,11 +144,11 @@ defineProps(
   .header-slice__subtittle p{
     color: var(--white);
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .header-slice__description{
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1;
     font-weight: normal;
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
@@ -183,7 +181,12 @@ defineProps(
     cursor: pointer;
   }
   .header-slice__background{
-    width: 100%;
+    width: 230%;
+    position: relative;
+    margin-top: -22.5rem;
+  }
+  .header-slice__background img{
+    background-size: contain;
   }
   .header-slice__whats{
     position: fixed;
@@ -191,7 +194,7 @@ defineProps(
     right: 3vw;
     width: 60px;
     height: 60px;
-    z-index: 2;
+    z-index: 3;
   }
   .header-slice__whats-image{
     border-radius: 50%;
@@ -199,28 +202,52 @@ defineProps(
 
   @media (min-width: 640px) {
     .header-slice__background{
-      /* display: block;
-      position: relative;
       z-index: 1;
       margin-top: -22.5rem;
-      width: 100%; */
+      width: 150%;
+    }
+    .header-slice__tittle{
+      font-size: 2rem;
+    }
+    .header-slice__subtittle p{
+      font-size: 1.5rem;
+    }
+    .header-slice__description{
+      font-size: 1.5rem;
     }
   }
 
   @media (min-width: 1024px) {
     .header-slice__background{
-      position: relative;
       z-index: 1;
       margin-top: -23rem;
       width: 100%;
     }
   }
+
+  @media (min-width: 1100px) {
+    .header-slice__schedule{
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 50px;
+    }
+  }
   @media (min-width: 1440px) {
     .header-slice__background{
-      position: relative;
       z-index: 1;
       margin-top: -24rem;
       width: 100%;
+    }
+  }
+  @media (min-width: 2100px) {
+    .header-slice__background{
+      z-index: 1;
+      margin-top: -24rem;
+      width: 100%;
+    }
+    .header-slice__tittle{
+      font-size: 3rem;
     }
   }
 

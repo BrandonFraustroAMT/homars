@@ -93,9 +93,6 @@ onMounted(async () => {
      </template>
     </div>
     <div id="triggerHousesTitle" class="houses-slice__column houses-slice__slider" ref="triggerHousesSlider">
-      <div>
-
-      </div>
       <div class="houses-slice__slider-left" >
         <h3>{{ slice.primary.subtittle }}</h3>
         <!-- Medidas -->
@@ -137,6 +134,8 @@ onMounted(async () => {
           <swiper-slide><PrismicImage :field="item.image3" /></swiper-slide>
         </swiper>
       </div>
+      
+      
     </div>
     <div class="houses-slice__column houses-slice__button" >
       <PrismicLink :field="slice.primary.linkbutton" class="diferentiator-slice__contact">
@@ -175,7 +174,7 @@ onMounted(async () => {
   }
   .houses-slice__title h2{
     font-size: 4vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: #949769;
     margin-bottom: 10px;
     font-weight: 200;
@@ -204,22 +203,23 @@ onMounted(async () => {
   
   .houses-slice__slider{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    padding: 0 8rem;
+    padding: 0 1rem;
   }
   .houses-slice__slider-left{
-    width: 40%;
+    width: 100%;
+    padding-top: 2rem;
     padding-right: 5%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center
   }
   .houses-slice__slider-left h3{
     color: #006c5b;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.6vw;
+    font-family: 'Mirage', sans-serif;
+    font-size: 2rem;
     margin-bottom: 10px;
     font-weight: 400;
   }
@@ -232,7 +232,7 @@ onMounted(async () => {
     padding-left: 0px;
     font-size: 18px;
     line-height: 1.5;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: #092e29;
     font-weight: 200;
   }
@@ -248,7 +248,7 @@ onMounted(async () => {
     flex-direction: row;
   }
   .houses-slice__characteristics p{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     margin-bottom: 0;
     margin-top: 0;
     font-size: 18px;
@@ -302,15 +302,12 @@ onMounted(async () => {
 
 
   .houses-slice__slider-right{
-    width: 60%;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-  }
-  .houses-slice__images{
-    display: flex;
   }
   
   .houses-slice__button{
@@ -325,5 +322,23 @@ onMounted(async () => {
     width: calc(100% - 20%);
     background-color: #949769;
     bottom: 0;
+  }
+
+  @media (min-width: 1100px) {
+    .houses-slice__slider{
+      flex-direction: row;
+      padding: 0 8rem;
+    }
+    .houses-slice__slider-left{
+      width: 40%;
+      padding-top: 0;
+      align-items: flex-start;
+    }
+    .houses-slice__slider-left h3{
+      font-size: 1.6vw;
+    }
+    .houses-slice__slider-right{
+      width: 60%;
+    }
   }
 </style>

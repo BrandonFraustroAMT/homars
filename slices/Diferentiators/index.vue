@@ -92,8 +92,8 @@ onMounted(async () => {
     padding-bottom: 2%;
   }
   .diferentiators-slice__title{
-    font-size: 1.6vw;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-family: 'Mirage', sans-serif;
     color: var(--greenStrongText);
     margin-bottom: 10px;
     letter-spacing: 0.2rem;
@@ -117,16 +117,13 @@ onMounted(async () => {
     flex-wrap: wrap;
     align-items: stretch;
   }
-  .max1400-diferentiator{
-    max-width: 1400px
-  }
   .diferentiator{
     padding: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 25%;
+    width: 30%;
   }
   .diferentiator img {
     width: 100%;
@@ -134,7 +131,7 @@ onMounted(async () => {
     max-width: 140px;
   }
   .diferentiator h3 {
-    font-size: 0.9vw;
+    font-size: 1rem;
     text-align: center;
     margin-top: 20px;
     color: var(--greenStrongText);
@@ -178,5 +175,38 @@ onMounted(async () => {
   .diferentiator-slice__contact:hover{
     letter-spacing: 2px;
     cursor: pointer;
+  }
+
+  @media (min-width: 700px) {
+    .max1400-diferentiator{
+      max-width: 700px
+    }
+    .diferentiator{
+      width: 25%;
+    }
+  }
+  @media (min-width: 1100px) {
+    .diferentiators-slice__title{
+      font-size: 1.6vw;
+    }
+    .max1400-diferentiator{
+      max-width: 1100px
+    }
+    .diferentiator{
+      width: 25%;
+    }
+    .diferentiator h3 {
+      font-size: 0.9vw;
+    }
+  }
+  @media (min-width: 1280px) {
+    .max1400-diferentiator{
+      max-width: 1280px
+    }
+  }
+  @media (min-width: 1440px) {
+    .max1400-diferentiator{
+      max-width: 1400px
+    }
   }
 </style>

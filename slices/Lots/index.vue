@@ -103,7 +103,7 @@ onMounted(async () => {
   .sectionLots{
     position: relative;
     background-color: #edebe8;
-    padding: 7% 5% 10% 0%;
+    padding: 7% 0% 10% 0%;
   }
   .lots-slice__column1{
     width: 100%;
@@ -117,7 +117,7 @@ onMounted(async () => {
   }
   .title-lots h2{
     font-size: 4vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: #949769;
     margin-bottom: 10px;
     font-weight: 400;
@@ -138,11 +138,11 @@ onMounted(async () => {
     width: 100%;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: stretch;
   }
   .lots-slice__left-column{
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,12 +159,12 @@ onMounted(async () => {
 
 
   .lots-slice__right-column{
-    padding-left: 5%;
-    width: 50%;
+    padding: 1rem 3rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
   }
   #triggerLotsText {
     opacity: 0;
@@ -180,7 +180,7 @@ onMounted(async () => {
     font-size: 18px;
     margin-bottom: 10px;
     line-height: 1.7;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     color: #092e29;
     text-align: justify;
   }
@@ -194,7 +194,7 @@ onMounted(async () => {
     border-bottom: 1px solid #d5d0c9;
     padding: 14px 0px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     line-height: 1.2;
     width: 100%;
@@ -202,17 +202,9 @@ onMounted(async () => {
   .lots-slice__gallery li:first-child{
     border-top: 1px solid #d5d0c9;
   }
-  .lots-slice__gallery li::before{
-    content: "";
-    position: relative;
-    width: 6px;
-    height: 6px;
-    background-color: #949769;
-    margin-right: 8px;
-  }
   .lots-slice__gallery li p{
     line-height: 1.7;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mirage', sans-serif;
     font-weight: 200;
     color: #092e29;
     font-size: 18px;
@@ -225,7 +217,7 @@ onMounted(async () => {
     border-radius: 8px;
     font-weight: 200;
     color: #006c5b;
-    margin-top: 0px !important;
+    margin-top: 10px !important;
     display: block;
     width: 160px;
     text-align: center;
@@ -265,5 +257,46 @@ onMounted(async () => {
   .slots-slice__btn:hover{
     letter-spacing: 2px;
     cursor: pointer;
+  }
+
+  @media (min-width: 1100px){
+    .sectionLots{
+      padding: 7% 5% 10% 0%;
+    }
+    .lots-slice__column2{
+      flex-direction: row;
+    }
+    .lots-slice__left-column{
+      width: 50%;
+    }
+    .lots-slice__right-column{
+      padding-left: 5%;
+      width: 50%;
+      align-items: flex-start;
+    }
+    .lots-slice__gallery li{
+      flex-direction: row;
+    }
+    .lots-slice__gallery li::before{
+      content: "";
+      position: relative;
+      width: 6px;
+      height: 6px;
+      background-color: #949769;
+      margin-right: 8px;
+    }
+    .lots-slice__big{
+      background-color: #fff;
+      padding: 10px 10px;
+      border-radius: 8px;
+      font-weight: 200;
+      color: #006c5b;
+      margin-top: 0px !important;
+      display: block;
+      width: 160px;
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    }
   }
 </style>

@@ -103,7 +103,7 @@ const toggleMobileMenu = () => {
   }
 
   .menu-hero__nav {
-    font-family: 'Clash', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Mirage', sans-serif;
     font-size: 20px;
     list-style: none;
     display: flex;
@@ -181,6 +181,11 @@ const toggleMobileMenu = () => {
     }
     .menu-hero__btn-link {
       font-size: 15px;
+    }
+  }
+  @media (max-width: 1100px) {
+    .navigation-slice{
+      display: none;
     }
   }
 

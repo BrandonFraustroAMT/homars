@@ -44,7 +44,8 @@ onMounted(async () => {
     class="separator-slice__container"
   >
     <div id="triggerImageSeparator" class="separator-slice__column separator-slice__max1400" ref="triggerImageSeparator">
-      <PrismicImage :field="slice.primary.image" class="separator-slice__video"/>
+      <!-- <PrismicImage :field="slice.primary.image" /> -->
+      <video src="/assets/video/video largo COSTA ARENA-v2.mp4" class="separator-slice__video" controls ></video>
     </div>
   </section>
 </template>
