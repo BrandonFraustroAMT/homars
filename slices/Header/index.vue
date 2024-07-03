@@ -74,7 +74,7 @@ defineProps(
 
   .header-container{
     width: 100%;
-    height: 99vh;
+    height: 102vh;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -219,7 +219,7 @@ defineProps(
     .header-slice__background{
       position: relative;
       z-index: 1;
-      margin-top: -23rem;
+      margin-top: -24rem;
       width: 100%;
     }
   }

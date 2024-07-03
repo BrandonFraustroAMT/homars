@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
+import { ref } from "vue";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -11,6 +12,39 @@ defineProps(
     "context",
   ]),
 );
+
+/// Refs para los elementos a animar
+const triggerContactTittle = ref<HTMLElement | null>(null);
+const triggerContactForm = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerContactTittle.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerContactTittle.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Text */
+    new ScrollMagic.Scene({
+      triggerElement: triggerContactForm.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerContactForm.value, "visible") // add class to reveal
+    .addTo(controller);
+  }
+});
 </script>
 
 <template>
@@ -19,10 +53,10 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="sectionContact"
   >
-    <div class="contact-slice__column1 contact-slice__tittle" >
+    <div id="triggerContactTittle" class="contact-slice__column1 contact-slice__tittle" ref="triggerContactTittle" >
       <h2><PrismicRichText :field="slice.primary.tittle" /></h2>
     </div>
-    <div class="contact-slice__column2" >
+    <div id="triggerContactTittle" class="contact-slice__column2" ref="triggerContactForm" >
       <div class="contact-slice__left-col" >
         <template v-for="item in slice.primary.groupcontact">
           <div class="contact-slice__block">
@@ -159,6 +193,16 @@ defineProps(
   .contact-slice__tittle{
     padding-bottom: 2%;
   }
+  #triggerContactTittle {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-in-out;
+  }
+  #triggerContactTittle.visible {
+    opacity: 1;
+    transform: none;
+  }
+
   .contact-slice__tittle h2{
     font-size: 4vw;
     font-family: 'Roboto', sans-serif;

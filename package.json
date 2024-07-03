@@ -18,8 +18,10 @@
     "gsap": "^3.12.5",
     "nuxt": "^3.12.2",
     "scrollmagic": "^2.0.8",
+    "swiper": "^11.1.4",
     "vue-intersection-observer": "^0.1.9",
-    "vue-scrollmagic": "^1.2.0"
+    "vue-scrollmagic": "^1.2.0",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/prismic": "^3.3.1",

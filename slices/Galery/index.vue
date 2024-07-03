@@ -12,10 +12,46 @@ defineProps(
     "context",
   ]),
 );
+
+/* Funcionalidad para filtrar */
 const currentIndex = ref(0);
 const setCurrentIndex = (index: number) => {
     currentIndex.value = index;
   };
+
+
+/// Refs para los elementos a animar
+const triggerGalleryText = ref<HTMLElement | null>(null);
+const triggerGalleryImage = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerGalleryText.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerGalleryText.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Text */
+    new ScrollMagic.Scene({
+      triggerElement: triggerGalleryImage.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerGalleryImage.value, "visible") // add class to reveal
+    .addTo(controller);
+  }
+});
 </script>
 
 <template>
@@ -26,7 +62,7 @@ const setCurrentIndex = (index: number) => {
   >
     <div class="gallery-slice__container gallery-slice__content">
       <div class="gallery-slice__row">
-        <div class="gallery-slice__col-text" >
+        <div id="triggerGalleryText" class="gallery-slice__col-text" ref="triggerGalleryText">
           <div class="gallery-slice__selector">
             <h2><PrismicRichText :field="slice.primary.tittle" /></h2>
             <div class="gallery-slice__content-selector">
@@ -34,12 +70,12 @@ const setCurrentIndex = (index: number) => {
                 <div class="gallery-slice__selector-text" @click="setCurrentIndex(index)">
                   {{ item.date }}
                 </div>
-                <div class="gallery-slice__line"></div>
+                <div class="gallery-slice__line" v-if="index !== slice.primary.groupgalery.length - 1"></div>
               </template>
             </div>
           </div>
         </div>
-        <div class="gallery-slice__col-image" >
+        <div id="triggerGalleryImage" class="gallery-slice__col-image" ref="triggerGalleryImage">
           <template v-for="(item,index) in slice.primary.groupgalery" :key="index">
             <div class="gallery-slice__image-content" v-show="currentIndex === index">
               <div class="gallery-slice__two-image" >
@@ -81,6 +117,24 @@ const setCurrentIndex = (index: number) => {
   .gallery-slice__content{
     max-width: 1648px;
     padding: 0 24px;
+  }
+  #triggerGalleryText {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerGalleryText.visible {
+    opacity: 1;
+    transform: none;
+  }
+  #triggerGalleryImage {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerGalleryImage.visible {
+    opacity: 1;
+    transform: none;
   }
 
   .gallery-slice__container::before{

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
+import { ref, onMounted } from "vue";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -11,6 +12,38 @@ defineProps(
     "context",
   ]),
 );
+
+/// Refs para los elementos a animar
+const triggerDifferentiatorTittle = ref<HTMLElement | null>(null);
+const triggerDifferentiatorList = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerDifferentiatorTittle.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "180%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerDifferentiatorTittle.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    new ScrollMagic.Scene({
+      triggerElement: triggerDifferentiatorList.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "180%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerDifferentiatorList.value, "visible") // add class to reveal
+    .addTo(controller);
+  }
+});
 </script>
 
 <template>
@@ -19,10 +52,10 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="diferentiators-slice"
   >
-    <div class="diferentiators-slice__column1 tittle-diferentiator" >
+    <div id="triggerDifferentiatorTittle" class="diferentiators-slice__column1 tittle-diferentiator" ref="triggerDifferentiatorTittle">
       <PrismicRichText :field="slice.primary.tittle" class="diferentiators-slice__title"/>
     </div>
-    <div class="diferentiators-slice__column1 list-diferentiator max1400-diferentiator" >
+    <div id="triggerDifferentiatorList" class="diferentiators-slice__column1 list-diferentiator max1400-diferentiator" ref="triggerDifferentiatorList">
       <template v-for="item in slice.primary.groupdifferentiators">
         <div class="diferentiator">
           <PrismicImage :field="item.icon" />
@@ -66,6 +99,18 @@ defineProps(
     letter-spacing: 0.2rem;
     font-weight: 200;
   }
+  #triggerDifferentiatorTittle {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 1s ease-in-out;
+  }
+
+  #triggerDifferentiatorTittle.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+
   .list-diferentiator{
     display: flex;
     flex-direction: row;
@@ -95,6 +140,18 @@ defineProps(
     color: var(--greenStrongText);
     font-weight: 400;
   }
+  #triggerDifferentiatorList {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 1s ease-in-out;
+  }
+
+  #triggerDifferentiatorList.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+
   .diferentiator-slice__contact{
     background-color: #0d3c35;
     border-radius: 10px;

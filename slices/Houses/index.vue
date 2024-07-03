@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
+import { ref, onMounted } from "vue";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+
+// State for Swiper and currentIndex
+const modules = ref<[any]>([Navigation]); // Ensure correct module import
+const currentIndexSlider = ref<number>(0);
+
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -11,6 +21,60 @@ defineProps(
     "context",
   ]),
 );
+/* const currentIndexSlider = ref(0);
+const currentIndexSlider = (index: number) => {
+    currentIndex.value = index;
+  }; */
+  
+/* Funcionalidad para filtrar */
+const currentIndex = ref(0);
+const setCurrentIndex = (index: number) => {
+    currentIndex.value = index;
+  };
+
+/// Refs para los elementos a animar
+const triggerHousesTitle = ref<HTMLElement | null>(null);
+const triggerHousesButtons = ref<HTMLElement | null>(null);
+const triggerHousesSlider = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerHousesTitle.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "180%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerHousesTitle.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Buttons */
+    new ScrollMagic.Scene({
+      triggerElement: triggerHousesButtons.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "180%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerHousesButtons.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Slider */
+    new ScrollMagic.Scene({
+      triggerElement: triggerHousesSlider.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "180%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerHousesSlider.value, "visible") // add class to reveal
+    .addTo(controller);
+  }
+});
 </script>
 
 <template>
@@ -19,16 +83,16 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="houses-section"
   >
-    <div class="houses-slice__column houses-slice__title" >
+    <div id="triggerHousesTitle" class="houses-slice__column houses-slice__title" ref="triggerHousesTitle">
       <h2><PrismicRichText :field="slice.primary.tittle" /></h2>
     </div>
     <!-- Botones Modelo -->
-    <div class="houses-slice__pagination">
-     <template v-for="item in slice.primary.groupbuttons">
-       <button class="houses-slice__page" >{{ item.labelbutton }}</button>
+    <div id="triggerHousesTitle" class="houses-slice__pagination" ref="triggerHousesButtons">
+     <template v-for="(item, index) in slice.primary.groupbuttons" :key="index">
+       <button class="houses-slice__page" @click="setCurrentIndex(index)">{{ item.labelbutton }}</button>
      </template>
     </div>
-    <div class="houses-slice__column houses-slice__slider" >
+    <div id="triggerHousesTitle" class="houses-slice__column houses-slice__slider" ref="triggerHousesSlider">
       <div>
 
       </div>
@@ -67,9 +131,11 @@ defineProps(
       </div>
       <!-- SLIDER -->
       <div class="houses-slice__slider-right" >
-        <template v-for="item in slice.primary.groupbuttons">
-          <PrismicImage :field="item.image1" />
-        </template>
+        <swiper :navigation="true" :modules="modules" class="mySwiper" v-for="(item, index) in slice.primary.groupbuttons" :key="index" v-show="currentIndex === index">
+          <swiper-slide><PrismicImage :field="item.image1" /></swiper-slide>
+          <swiper-slide><PrismicImage :field="item.image2" /></swiper-slide>
+          <swiper-slide><PrismicImage :field="item.image3" /></swiper-slide>
+        </swiper>
       </div>
     </div>
     <div class="houses-slice__column houses-slice__button" >
@@ -98,6 +164,15 @@ defineProps(
   .houses-slice__title{
     padding-bottom: 3%;
   }
+  #triggerHousesTitle{
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerHousesTitle.visible{
+    opacity: 1;
+    transform: none;
+  }
   .houses-slice__title h2{
     font-size: 4vw;
     font-family: 'Roboto', sans-serif;
@@ -119,6 +194,12 @@ defineProps(
     padding: 10px;
     border-radius: 10px;
     color: #edebe8;
+    margin-right: 10px;
+  }
+  .houses-slice__page:hover{
+    background-color: #9a9e82;
+    border: 1px solid #9a9e82;
+    cursor: pointer;
   }
   
   .houses-slice__slider{
@@ -224,9 +305,12 @@ defineProps(
     width: 60%;
     position: relative;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+  }
+  .houses-slice__images{
+    display: flex;
   }
   
   .houses-slice__button{

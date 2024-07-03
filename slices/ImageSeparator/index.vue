@@ -15,7 +15,7 @@ defineProps(
 
 
 /// Refs para los elementos a animar
-const imageSeparatorSlice = ref<HTMLElement | null>(null);
+const triggerImageSeparator = ref<HTMLElement | null>(null);
 
 onMounted(async () => {
   // Verificar si estamos en el lado del cliente
@@ -26,13 +26,13 @@ onMounted(async () => {
     
     /* Tittle */
     new ScrollMagic.Scene({
-      triggerElement: "#separator-slice-video-trigger",
-      triggerHook: 0.5, // show, when scrolled 10% into view
-			duration: "100%", // hide 10% before exiting view (80% + 10% from bottom)
-			offset: 0 // move trigger to center of element
+      triggerElement: triggerImageSeparator.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "180%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
     })
-    .setClassToggle("#separator-slice-video", "visible") // add class to reveal
-		.addTo(controller);
+    .setClassToggle(triggerImageSeparator.value, "visible") // add class to reveal
+    .addTo(controller);
   }
 });
 </script>
@@ -43,8 +43,7 @@ onMounted(async () => {
     :data-slice-variation="slice.variation"
     class="separator-slice__container"
   >
-    <div id="separator-slice-video-trigger" class="spacer s0"></div>
-    <div id="separator-slice-video" class="separator-slice__column separator-slice__max1400" ref="imageSeparatorSlice">
+    <div id="triggerImageSeparator" class="separator-slice__column separator-slice__max1400" ref="triggerImageSeparator">
       <PrismicImage :field="slice.primary.image" class="separator-slice__video"/>
     </div>
   </section>
@@ -83,14 +82,15 @@ onMounted(async () => {
     font-family: Arial, Helvetica, sans-serif;
     word-break: initial;
   }
-
-  #separator-slice-video{
+  
+  #triggerImageSeparator {
     opacity: 0;
-		transform: scale(0.9);
-		transition: all 1s ease-in-out;
+    transform: translateY(10px);
+    transition: all 1s ease-in-out;
   }
-  #separator-slice-video.visible{
+
+  #triggerImageSeparator.visible {
     opacity: 1;
-    transition: none;
+    transform: none;
   }
 </style>

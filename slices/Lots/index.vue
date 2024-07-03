@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
+import { ref, onMounted } from "vue";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -11,6 +12,50 @@ defineProps(
     "context",
   ]),
 );
+
+/// Refs para los elementos a animar
+const triggerLotsTitle = ref<HTMLElement | null>(null);
+const triggerLotsImage = ref<HTMLElement | null>(null);
+const triggerLotsText = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerLotsTitle.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerLotsTitle.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Text */
+    new ScrollMagic.Scene({
+      triggerElement: triggerLotsImage.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerLotsImage.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Image */
+    new ScrollMagic.Scene({
+      triggerElement: triggerLotsText.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerLotsText.value, "visible") // add class to reveal
+    .addTo(controller);
+  }
+});
 </script>
 
 <template>
@@ -19,14 +64,14 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="sectionLots"
   >
-    <div class="lots-slice__column1 title-lots" >
+    <div id="triggerLotsTitle" class="lots-slice__column1 title-lots" ref="triggerLotsTitle">
       <h2><PrismicRichText :field="slice.primary.tittle" /></h2>
     </div>
     <div class="lots-slice__column2" >
-      <div class="lots-slice__left-column">
+      <div id="triggerLotsImage" class="lots-slice__left-column" ref="triggerLotsImage">
         <PrismicImage :field="slice.primary.imagelots" />
       </div>
-      <div class="lots-slice__right-column">
+      <div id="triggerLotsText" class="lots-slice__right-column" ref="triggerLotsText">
         <div class="lots-slice__richText">
           <p>{{ slice.primary.description }}</p>
           <p>{{ slice.primary.description2 }}</p>
@@ -78,6 +123,17 @@ defineProps(
     font-weight: 400;
     letter-spacing: 0.2rem;
   }
+  #triggerLotsTitle {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-in-out;
+  }
+  #triggerLotsTitle.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+
   .lots-slice__column2{
     width: 100%;
     position: relative;
@@ -91,6 +147,17 @@ defineProps(
     flex-direction: column;
     justify-content: center;
   }
+  #triggerLotsImage {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerLotsImage.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+
   .lots-slice__right-column{
     padding-left: 5%;
     width: 50%;
@@ -99,6 +166,16 @@ defineProps(
     justify-content: center;
     align-items: flex-start;
   }
+  #triggerLotsText {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerLotsText.visible {
+    opacity: 1;
+    transform: none;
+  }
+
   .lots-slice__richText p{
     font-size: 18px;
     margin-bottom: 10px;

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
+import { ref, onMounted } from "vue";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -11,6 +12,39 @@ defineProps(
     "context",
   ]),
 );
+
+/// Refs para los elementos a animar
+const triggerUbicationText = ref<HTMLElement | null>(null);
+const triggerUbicationMap = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerUbicationText.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerUbicationText.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Text */
+    new ScrollMagic.Scene({
+      triggerElement: triggerUbicationMap.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerUbicationMap.value, "visible") // add class to reveal
+    .addTo(controller);
+  }
+});
 </script>
 
 <template>
@@ -20,7 +54,7 @@ defineProps(
     class="ubication-slice"
   >
     <div class="ubication-slice__column" >
-      <div class="ubication-slice__left" >
+      <div id="triggerUbicationText" class="ubication-slice__left"  ref="triggerUbicationText">
         <div class="ubication-slice__title" >
           <h2>
             <PrismicRichText :field="slice.primary.tittle" />
@@ -98,7 +132,7 @@ defineProps(
           {{ slice.primary.labelbutton }}
         </PrismicLink>
       </div>
-      <div class="ubication-slice__right" >
+      <div id="triggerUbicationMap" class="ubication-slice__right" ref="triggerUbicationMap">
         <div class="ubication-slice__map" >
           <!-- imagen mapa -->
           <img src="" alt="">
@@ -136,6 +170,16 @@ defineProps(
     flex-direction: column;
     justify-content: center;
   }
+  #triggerUbicationText{
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerUbicationText.visible{
+    opacity: 1;
+    transform: none;
+  }
+
   .ubication-slice .ubication-slice__left{
     width: 50%;
     align-items: flex-start;
@@ -227,6 +271,15 @@ defineProps(
   .ubication-slice__right{
     width: 50%;
     padding: 0% 0% 0% 10%;
+  }
+  #triggerUbicationMap{
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerUbicationMap.visible{
+    opacity: 1;
+    transform: none;
   }
   .ubication-slice__map{
     position: relative;

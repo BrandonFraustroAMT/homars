@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
+import { ref, onMounted } from "vue";
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -11,6 +12,53 @@ defineProps(
     "context",
   ]),
 );
+
+/// Refs para los elementos a animar
+const triggerAmenitiesTitle = ref<HTMLElement | null>(null);
+const triggerAmenitiesList = ref<HTMLElement | null>(null);
+const triggerAmenitiesBigTittle = ref<HTMLElement | null>(null);
+
+onMounted(async () => {
+  // Verificar si estamos en el lado del cliente
+  if (typeof window !== 'undefined') {
+    const { default: ScrollMagic } = await import('scrollmagic');
+
+    const controller = new ScrollMagic.Controller();
+    
+    /* Tittle */
+    new ScrollMagic.Scene({
+      triggerElement: triggerAmenitiesTitle.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerAmenitiesTitle.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Icons */
+    new ScrollMagic.Scene({
+      triggerElement: triggerAmenitiesList.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerAmenitiesList.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    /* Text Image */
+    new ScrollMagic.Scene({
+      triggerElement: triggerAmenitiesBigTittle.value,
+      triggerHook: 0.9, // show, when scrolled 10% into view
+      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      offset: 50 // move trigger to center of element
+    })
+    .setClassToggle(triggerAmenitiesBigTittle.value, "visible") // add class to reveal
+    .addTo(controller);
+
+    
+    
+  }
+});
 </script>
 
 <template>
@@ -19,10 +67,10 @@ defineProps(
     :data-slice-variation="slice.variation"
     class="sectionAmenities"
   >
-    <div class="amenities-slice__column amenities-slice__title" >
+    <div id="triggerAmenitiesTitle" class="amenities-slice__column amenities-slice__title" ref="triggerAmenitiesTitle">
       <h2><PrismicRichText :field="slice.primary.tittle" /></h2>
     </div>
-    <div class="amenities-slice__column amenities-slice__list amenities-slice__max1400" >
+    <div id="triggerAmenitiesTitle" class="amenities-slice__column amenities-slice__list amenities-slice__max1400" ref="triggerAmenitiesList">
       <template v-for="item in slice.primary.groupamenities">
         <div class="amenities-slice__amenitie">
           <PrismicImage :field="item.icon" />
@@ -31,7 +79,7 @@ defineProps(
       </template>
     </div>
     <div class="amenities-slice__column amenities-slice__big amenities-slice__max1400" >
-      <div class="amenities-slice__big-title amenities-slice__max1200">
+      <div id="triggerAmenitiesBigTittle" class="amenities-slice__big-title amenities-slice__max1200" ref="triggerAmenitiesBigTittle">
         <h3>{{ slice.primary.subtittle }}</h3>
       </div>
       <PrismicImage :field="slice.primary.imageamenitie" />
@@ -69,6 +117,25 @@ defineProps(
     color: #949769;
     margin-bottom: 10px;
   }
+  #triggerAmenitiesTitle{
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 1s ease-in-out;
+  }
+  #triggerAmenitiesTitle.visible{
+    opacity: 1;
+    transform: none;
+  }
+  #triggerAmenitiesBigTittle{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+  }
+  #triggerAmenitiesBigTittle.visible{
+    opacity: 1;
+    transform: none;
+  }
+
   .amenities-slice__max1400{
     max-width: 1400px
   }
