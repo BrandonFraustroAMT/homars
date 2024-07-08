@@ -208,8 +208,7 @@ onMounted(async () => {
     font-weight: 200;
     color: #092e29;
     font-size: 18px;
-    width: calc(100% - 160px);
-    padding-right: 10%;
+    width: 100%;
   }
   .lots-slice__big{
     background-color: #fff;
@@ -284,6 +283,10 @@ onMounted(async () => {
       height: 6px;
       background-color: #949769;
       margin-right: 8px;
+    }
+    .lots-slice__gallery li p{
+      width: calc(100% - 160px);
+      padding-right: 10%;
     }
     .lots-slice__big{
       background-color: #fff;
