@@ -119,13 +119,13 @@ onMounted(async () => {
 
 
   .concept-slice__phrase-title{
-    font-size: 5vw;
+    font-size: 2.5rem;
     font-weight: 200;
     line-height: 1.2;
     font-family: 'Mirage', sans-serif;
     color: var(--blueTittle);
     text-align: center;
-    width: 45%;
+    width: 100%;
   }
   .concept-slice__column2{
     width: 100%;
@@ -218,6 +218,10 @@ onMounted(async () => {
       flex-direction: column !important;
       align-items: flex-start !important;
       justify-content: center !important;
+    }
+    .concept-slice__phrase-title{
+      font-size: 5vw;
+      width: 45%;
     }
     .concept-slice__leftCol-subtitle{
       font-size: 1.6vw;

@@ -123,7 +123,7 @@ onMounted(async () => {
     flex-direction: column;
     align-items: center;
     position: relative;
-    width: 30%;
+    width: 50%;
   }
   .diferentiator img {
     width: 100%;

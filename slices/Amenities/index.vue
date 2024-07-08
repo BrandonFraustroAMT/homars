@@ -180,7 +180,7 @@ onMounted(async () => {
   }
   .amenities-slice__big-title h3{
     color: #dbd6c9;
-    font-size: 5rem;
+    font-size: 3.5rem;
     font-family: 'Mirage', sans-serif;
     font-weight: 200;
     line-height: 1;
