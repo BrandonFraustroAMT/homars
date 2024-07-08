@@ -29,7 +29,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: triggerLotsTitle.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(triggerLotsTitle.value, "visible") // add class to reveal
@@ -39,7 +39,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: triggerLotsImage.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(triggerLotsImage.value, "visible") // add class to reveal
@@ -49,7 +49,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: triggerLotsText.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(triggerLotsText.value, "visible") // add class to reveal

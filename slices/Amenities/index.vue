@@ -29,7 +29,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: triggerAmenitiesTitle.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(triggerAmenitiesTitle.value, "visible") // add class to reveal
@@ -39,7 +39,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: triggerAmenitiesList.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(triggerAmenitiesList.value, "visible") // add class to reveal
@@ -49,7 +49,7 @@ onMounted(async () => {
     new ScrollMagic.Scene({
       triggerElement: triggerAmenitiesBigTittle.value,
       triggerHook: 0.9, // show, when scrolled 10% into view
-      duration: "150%", // hide 10% before exiting view (80% + 10% from bottom)
+      duration: "200%", // hide 10% before exiting view (80% + 10% from bottom)
       offset: 50 // move trigger to center of element
     })
     .setClassToggle(triggerAmenitiesBigTittle.value, "visible") // add class to reveal
