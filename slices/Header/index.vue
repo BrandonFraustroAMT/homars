@@ -181,23 +181,18 @@ defineProps(
     cursor: pointer;
   }
   .header-slice__background{
-    width: 230%;
+    width: 100%;
+    height: 112vh;
     position: relative;
     margin-top: -22.5rem;
   }
   .header-slice__background img{
-    background-size: contain;
+    width: 100%;
+    height: calc(100% - 0px);
+    object-fit: cover;
   }
   .header-slice__whats{
-    position: fixed;
-    bottom: 5vh;
-    right: 3vw;
-    width: 60px;
-    height: 60px;
-    z-index: 3;
-  }
-  .header-slice__whats-image{
-    border-radius: 50%;
+    display: none;
   }
 
   @media (min-width: 640px) {
@@ -231,6 +226,17 @@ defineProps(
       position: absolute;
       top: 30px;
       right: 50px;
+    }
+    .header-slice__whats{
+      position: fixed;
+      bottom: 5vh;
+      right: 3vw;
+      width: 60px;
+      height: 60px;
+      z-index: 3;
+    }
+    .header-slice__whats-image{
+      border-radius: 50%;
     }
   }
   @media (min-width: 1440px) {

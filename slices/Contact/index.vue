@@ -290,7 +290,7 @@ onMounted(async () => {
   }
   .contact-slice__form label{
     width: 50%;
-    font-size: 18px;
+    font-size: 17px;
     color: #d0c7ab;
     
   }
