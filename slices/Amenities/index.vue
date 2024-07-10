@@ -111,7 +111,7 @@ onMounted(async () => {
   }
   .amenities-slice__title h2{
     font-size: 4vw;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     letter-spacing: 0.2rem;
     font-weight: 400;
     color: #949769;
@@ -181,7 +181,7 @@ onMounted(async () => {
   .amenities-slice__big-title h3{
     color: #dbd6c9;
     font-size: 3.5rem;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     font-weight: 200;
     line-height: 1;
     text-align: center;

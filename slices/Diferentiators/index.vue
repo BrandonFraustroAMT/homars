@@ -53,7 +53,9 @@ onMounted(async () => {
     class="diferentiators-slice"
   >
     <div id="triggerDifferentiatorTittle" class="diferentiators-slice__column1 tittle-diferentiator" ref="triggerDifferentiatorTittle">
-      <PrismicRichText :field="slice.primary.tittle" class="diferentiators-slice__title"/>
+      <h2>
+        <PrismicRichText :field="slice.primary.tittle" class="diferentiators-slice__title"/>
+      </h2>
     </div>
     <div id="triggerDifferentiatorList" class="diferentiators-slice__column1 list-diferentiator max1400-diferentiator" ref="triggerDifferentiatorList">
       <template v-for="item in slice.primary.groupdifferentiators">
@@ -93,11 +95,10 @@ onMounted(async () => {
   }
   .diferentiators-slice__title{
     font-size: 2rem;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     color: var(--greenStrongText);
     margin-bottom: 10px;
     letter-spacing: 0.2rem;
-    font-weight: 200;
   }
   #triggerDifferentiatorTittle {
     opacity: 0;
@@ -133,9 +134,9 @@ onMounted(async () => {
   .diferentiator h3 {
     font-size: 1rem;
     text-align: center;
+    font-family: 'Mirage Medium';
     margin-top: 20px;
     color: var(--greenStrongText);
-    font-weight: 400;
   }
   #triggerDifferentiatorList {
     opacity: 0;
@@ -187,7 +188,7 @@ onMounted(async () => {
   }
   @media (min-width: 1100px) {
     .diferentiators-slice__title{
-      font-size: 1.6vw;
+      font-size: 2rem;
     }
     .max1400-diferentiator{
       max-width: 1100px
@@ -196,7 +197,7 @@ onMounted(async () => {
       width: 25%;
     }
     .diferentiator h3 {
-      font-size: 0.9vw;
+      font-size: 1.2vw;
     }
   }
   @media (min-width: 1280px) {

@@ -1,6 +1,20 @@
 @font-face {
-  font-family: 'Mirage';
-  src: url('.&static/fonts/mirage/MADE Mirage Regular PERSONAL USE.otf') format('otf');
+  font-family: 'Mirage Bold';
+  src: url('../../static/fonts/mirage/MADE\ Mirage\ Bold\ PERSONAL\ USE.otf') format('otf');
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mirage Medium';
+  src: url('../../static/fonts/mirage/MADE Mirage Medium PERSONAL USE.otf') format('otf');
+  
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mirage Regular';
+  src: url('../../static/fonts/mirage/MADE Mirage Regular PERSONAL USE.otf') format('otf');
   
   font-weight: normal;
   font-style: normal;
@@ -19,7 +33,7 @@
 }
 
 body {
-  font-family: 'Mirage', sans-serif;
+  font-family: 'Mirage Medium';
   background-color: #F5EADF;
   color: var(--white);
 }

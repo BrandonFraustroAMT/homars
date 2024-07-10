@@ -114,7 +114,8 @@ defineProps(
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     padding: 10px;
-    color: var(--white);
+    font-family: 'Mirage Medium';
+    color: #fff;
     font-size: 15px;
     text-decoration: none;
     transition: 0.2s ease-in-out;
@@ -132,6 +133,7 @@ defineProps(
     line-height: 1;
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
     opacity: 1;
+    font-family: 'Mirage Bold';
   }
   .header-slice__subtittle{
     display: flex;
@@ -145,6 +147,7 @@ defineProps(
     color: var(--white);
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
     font-size: 1rem;
+    font-family: 'Mirage Medium';
   }
   .header-slice__description{
     color: var(--white);
@@ -152,6 +155,7 @@ defineProps(
     line-height: 1;
     font-weight: normal;
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.5);
+    font-family: 'Mirage Medium';
   }
   .header-slice__link-moreinfo{
     background-color: #0d3c35;
@@ -159,6 +163,7 @@ defineProps(
     color: var(--white);
     line-height: 1;
     padding: 18px 40px;
+    font-family: 'Mirage Medium';
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -228,6 +233,7 @@ defineProps(
       right: 50px;
     }
     .header-slice__whats{
+      display: block;
       position: fixed;
       bottom: 5vh;
       right: 3vw;

@@ -164,17 +164,15 @@ onMounted(async () => {
   }
   .gallery-slice__selector h2{
     font-size: 1.5rem;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     letter-spacing: 0.2rem;
-    font-weight: 400;
     margin-bottom: 20px;
     color: #fff
   }
 
   .gallery-slice__selector-text{
     cursor: pointer;
-    font-family: 'Mirage', sans-serif;
-    font-weight: 100;
+    font-family: 'Mirage Medium';
     width: 100%;
     padding: 7px;
     text-align: center;

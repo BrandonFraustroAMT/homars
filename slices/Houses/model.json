@@ -155,6 +155,29 @@
             }
           }
         },
+        "thirdfloor": {
+          "type": "Text",
+          "config": {
+            "label": "ThirdFloor",
+            "placeholder": ""
+          }
+        },
+        "groupthirdfloor": {
+          "type": "Group",
+          "config": {
+            "label": "GroupThirdFloor",
+            "repeat": true,
+            "fields": {
+              "label": {
+                "type": "Text",
+                "config": {
+                  "label": "Label",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
         "pricetext": {
           "type": "Text",
           "config": {

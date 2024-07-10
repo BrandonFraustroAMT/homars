@@ -931,6 +931,21 @@ export interface HousesSliceDefaultPrimaryGroupsecondfloorItem {
 }
 
 /**
+ * Item in *Houses → Default → Primary → GroupThirdFloor*
+ */
+export interface HousesSliceDefaultPrimaryGroupthirdfloorItem {
+  /**
+   * Label field in *Houses → Default → Primary → GroupThirdFloor*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: houses.default.primary.groupthirdfloor[].label
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  label: prismic.KeyTextField;
+}
+
+/**
  * Primary content in *Houses → Default → Primary*
  */
 export interface HousesSliceDefaultPrimary {
@@ -1020,6 +1035,28 @@ export interface HousesSliceDefaultPrimary {
    */
   groupsecondfloor: prismic.GroupField<
     Simplify<HousesSliceDefaultPrimaryGroupsecondfloorItem>
+  >;
+
+  /**
+   * ThirdFloor field in *Houses → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: houses.default.primary.thirdfloor
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  thirdfloor: prismic.KeyTextField;
+
+  /**
+   * GroupThirdFloor field in *Houses → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: houses.default.primary.groupthirdfloor[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  groupthirdfloor: prismic.GroupField<
+    Simplify<HousesSliceDefaultPrimaryGroupthirdfloorItem>
   >;
 
   /**
@@ -1873,6 +1910,7 @@ declare module "@prismicio/client" {
       HousesSliceDefaultPrimaryGroupfirstsectionItem,
       HousesSliceDefaultPrimaryGroupfirstfloorItem,
       HousesSliceDefaultPrimaryGroupsecondfloorItem,
+      HousesSliceDefaultPrimaryGroupthirdfloorItem,
       HousesSliceDefaultPrimary,
       HousesSliceVariation,
       HousesSliceDefault,

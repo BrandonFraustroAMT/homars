@@ -117,6 +117,13 @@ onMounted(async () => {
                 <li>{{ item.label }}</li>
               </template>
             </ul>
+            
+            <p>{{ slice.primary.thirdfloor }}</p>
+            <ul>
+              <template v-for="item in slice.primary.groupthirdfloor">
+                <li>{{ item.label }}</li>
+              </template>
+            </ul>
           </div>
         </div>
         <div class="houses-slice__prices">
@@ -174,10 +181,9 @@ onMounted(async () => {
   }
   .houses-slice__title h2{
     font-size: 4vw;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     color: #949769;
     margin-bottom: 10px;
-    font-weight: 200;
   }
   .houses-slice__pagination{
     width: 100%;
@@ -218,10 +224,9 @@ onMounted(async () => {
   }
   .houses-slice__slider-left h3{
     color: #006c5b;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Medium';
     font-size: 2rem;
     margin-bottom: 10px;
-    font-weight: 400;
   }
 
   .houses-slice__measures{
@@ -232,9 +237,8 @@ onMounted(async () => {
     padding-left: 0px;
     font-size: 18px;
     line-height: 1.5;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Regular';
     color: #092e29;
-    font-weight: 200;
   }
   .houses-slice__characteristics{
     border-top: 1px solid #949769;
@@ -248,7 +252,7 @@ onMounted(async () => {
     flex-direction: row;
   }
   .houses-slice__characteristics p{
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Regular';
     margin-bottom: 0;
     margin-top: 0;
     font-size: 18px;
@@ -266,7 +270,6 @@ onMounted(async () => {
     flex-direction: row;
     align-items: flex-start;
     font-size: 18px;
-    font-weight: 200;
     color: #092e29;
   }
   .houses-slice__characteristics li::before{

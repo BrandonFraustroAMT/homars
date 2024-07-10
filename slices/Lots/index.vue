@@ -117,10 +117,9 @@ onMounted(async () => {
   }
   .title-lots h2{
     font-size: 4vw;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     color: #949769;
     margin-bottom: 10px;
-    font-weight: 400;
     letter-spacing: 0.2rem;
   }
   #triggerLotsTitle {
@@ -180,7 +179,7 @@ onMounted(async () => {
     font-size: 18px;
     margin-bottom: 10px;
     line-height: 1.7;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Medium';
     color: #092e29;
     text-align: justify;
   }
@@ -204,8 +203,7 @@ onMounted(async () => {
   }
   .lots-slice__gallery li p{
     line-height: 1.7;
-    font-family: 'Mirage', sans-serif;
-    font-weight: 200;
+    font-family: 'Mirage Regular';
     color: #092e29;
     font-size: 18px;
     width: 100%;

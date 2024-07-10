@@ -188,7 +188,7 @@ onMounted(async () => {
   .ubication-slice__title h2{
     color: var(--greenStrongText);
     font-size: 3rem;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     font-weight: 200;
     letter-spacing: 0.2rem;
     margin-bottom: 10px;
@@ -206,7 +206,7 @@ onMounted(async () => {
     margin-bottom: 10px;
     font-size: 1.2rem;
     line-height: 1.7;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Regular';
   }
   .ubication-slice__ubications-list{
     display: flex;
@@ -225,7 +225,7 @@ onMounted(async () => {
   .ubication-slice__block-top h4{
     margin-top: 0px;
     font-size: 1rem;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Medium';
     color: #535524;
     margin-bottom: 0;
     font-weight: 400;
@@ -378,10 +378,10 @@ onMounted(async () => {
       font-size: 1.1vw;
     }
     .ubication-slice__block-top h4{
-      font-size: 1.1vw;
+      font-size: 1.2vw;
     }
     .ubication-slice__list-data{
-      font-size: 0.8vw;
+      font-size: 0.9vw;
     }
     .ubication-slice__right{
       width: 50%;

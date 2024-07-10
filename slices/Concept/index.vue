@@ -120,9 +120,8 @@ onMounted(async () => {
 
   .concept-slice__phrase-title{
     font-size: 2.5rem;
-    font-weight: 200;
     line-height: 1.2;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     color: var(--blueTittle);
     text-align: center;
     width: 100%;
@@ -145,8 +144,7 @@ onMounted(async () => {
   }
   .concept-slice__leftCol-subtitle{
     font-size: 2rem;
-    font-family: 'Mirage', sans-serif;
-    font-weight: 400;
+    font-family: 'Mirage Medium';
     color: var(--greenText);
     margin-bottom: 10px;
   }
@@ -156,8 +154,7 @@ onMounted(async () => {
   .concept-slice__richText p {
     font-size: 1rem;
     line-height: 1.7;
-    font-weight: 100;
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Regular';
     color: var(--greenStrongText);
   }
   #reveal-concept-slice{
@@ -192,6 +189,7 @@ onMounted(async () => {
     margin-top: 20px;
     transition: letter-spacing 0.2s ease-in-out;
     text-decoration: none;
+    font-family: 'Mirage Medium';
   }
   .concept-slice__btn::before{
     content: "";

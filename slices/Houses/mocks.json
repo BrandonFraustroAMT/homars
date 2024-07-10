@@ -90,7 +90,6 @@
 							[
 								"image3",
 								{
-									"__TYPE__": "ImageContent",
 									"origin": {
 										"id": "main",
 										"url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
@@ -108,6 +107,9 @@
 										},
 										"background": "transparent"
 									},
+									"credits": null,
+									"alt": null,
+									"__TYPE__": "ImageContent",
 									"thumbnails": {}
 								}
 							]
@@ -218,6 +220,29 @@
 				"__TYPE__": "FieldContent",
 				"value": "yard",
 				"type": "Text"
+			},
+			"thirdfloor": {
+				"__TYPE__": "FieldContent",
+				"value": "studying",
+				"type": "Text"
+			},
+			"groupthirdfloor": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"label",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "mood",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		"items": []

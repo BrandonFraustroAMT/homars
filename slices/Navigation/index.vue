@@ -103,7 +103,7 @@ const toggleMobileMenu = () => {
   }
 
   .menu-hero__nav {
-    font-family: 'Mirage', sans-serif;
+    font-family: 'Mirage Bold';
     font-size: 20px;
     list-style: none;
     display: flex;
