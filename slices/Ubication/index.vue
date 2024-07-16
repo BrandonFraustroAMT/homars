@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { type Content } from "@prismicio/client";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, defineComponent } from "vue";
+import LeafletMap from '@/components/LeafletMap.vue';
 
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
@@ -13,12 +14,12 @@ defineProps(
   ]),
 );
 
+
 /// Refs para los elementos a animar
 const triggerUbicationText = ref<HTMLElement | null>(null);
 const triggerUbicationMap = ref<HTMLElement | null>(null);
 
 onMounted(async () => {
-  // Verificar si estamos en el lado del cliente
   if (typeof window !== 'undefined') {
     const { default: ScrollMagic } = await import('scrollmagic');
 
@@ -43,6 +44,12 @@ onMounted(async () => {
     })
     .setClassToggle(triggerUbicationMap.value, "visible") // add class to reveal
     .addTo(controller);
+  }
+});
+
+defineComponent({
+  components: {
+    LeafletMap
   }
 });
 </script>
@@ -134,16 +141,7 @@ onMounted(async () => {
       </div>
       <div id="triggerUbicationMap" class="ubication-slice__right" ref="triggerUbicationMap">
         <div class="ubication-slice__map" >
-          <!-- imagen mapa -->
-          <img src="" alt="">
-          <a href="" class="ubication-slice__pin">
-            <img src="" alt="">
-            <div class="ubication-slice__tooltip">Abrir en Maps</div>
-          </a>
-          <!-- Lista de pins -->
-          <div class="pin">
-
-          </div>
+          <LeafletMap />
         </div>
       </div>
     </div>
@@ -284,6 +282,7 @@ onMounted(async () => {
   }
   .ubication-slice__map{
     position: relative;
+    z-index: 1;
   }
   .ubication-slice__map img{
     width: 100%;
