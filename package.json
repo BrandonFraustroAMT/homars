@@ -11,6 +11,7 @@
     "slicemachine": "start-slicemachine"
   },
   "dependencies": {
+    "@nuxtjs/leaflet": "^1.0.14",
     "@prismicio/client": "^7.6.0",
     "@prismicio/helpers": "^2.3.9",
     "@prismicio/react": "^2.8.0",

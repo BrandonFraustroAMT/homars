@@ -3,6 +3,7 @@ import { type Content } from "@prismicio/client";
 import { ref, onMounted, defineComponent } from "vue";
 import LeafletMap from '@/components/LeafletMap.vue';
 
+const zoom = ref(6)
 // The array passed to `getSliceComponentProps` is purely optional.
 // Consider it as a visual hint for you when templating your slice.
 defineProps(
@@ -141,7 +142,25 @@ defineComponent({
       </div>
       <div id="triggerUbicationMap" class="ubication-slice__right" ref="triggerUbicationMap">
         <div class="ubication-slice__map" >
-          <LeafletMap />
+=======
+          <!-- imagen mapa -->
+            <LMap
+              ref="map"
+              :zoom="zoom"
+              :center="[20.159098, -98.964844]"
+              :use-global-leaflet="false"
+            >
+              <LTileLayer
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                attribution="&amp;copy; <a href=&quot;https://www.openstreetmap.org/&quot;>OpenStreetMap</a> contributors"
+                layer-type="base"
+                name="OpenStreetMap"
+              />
+              <LMarker :lat-lng="[20.159098, -98.964844]">
+                <LPopup> Homars! </LPopup>
+              </LMarker>
+            </LMap>
+>>>>>>> e54c599 (perf: improve map optimization)
         </div>
       </div>
     </div>
@@ -268,7 +287,7 @@ defineComponent({
     cursor: pointer;
   }
   .ubication-slice__right{
-    width: 100%;
+    width: 80%;
     padding: 15% 0% 0% 10%;
   }
   #triggerUbicationMap{
@@ -281,15 +300,18 @@ defineComponent({
     transform: none;
   }
   .ubication-slice__map{
+<<<<<<< HEAD
     position: relative;
     z-index: 1;
   }
   .ubication-slice__map img{
+=======
+>>>>>>> e54c599 (perf: improve map optimization)
     width: 100%;
-    height: 100%;
-    position: relative;
-    display: block;
-    max-height: 80vh;
+    height: 400px;
+  }
+  .leaflet-container {
+    z-index: 1;
   }
   .ubication-slice__pin{
     position: absolute;
