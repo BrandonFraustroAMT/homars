@@ -279,8 +279,9 @@ onMounted(async () => {
   .houses-slice__characteristics li::before{
     content: "";
     display: inline-block;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
     background-color: #949769;
     padding-right: 8px;
     margin-top: 8px;
