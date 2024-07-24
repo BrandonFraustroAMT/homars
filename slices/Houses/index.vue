@@ -102,7 +102,7 @@ onMounted(async () => {
            </template>
          </ul>
         <div class="houses-slice__richText houses-slice__characteristics">
-          <div>
+          <div class="houses-slice__characteristics1">
             <p>{{ slice.primary.firstfloor }}</p>
             <ul>
               <template v-for="item in slice.primary.groupfirstfloor">
@@ -110,7 +110,7 @@ onMounted(async () => {
               </template>
             </ul>
           </div>
-          <div>
+          <div class="houses-slice__characteristics1">
             <p>{{ slice.primary.secondfloor }}</p>
             <ul>
               <template v-for="item in slice.primary.groupsecondfloor">
@@ -216,7 +216,7 @@ onMounted(async () => {
   .houses-slice__slider-left{
     width: 100%;
     padding-top: 2rem;
-    padding-right: 5%;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,6 +231,9 @@ onMounted(async () => {
 
   .houses-slice__measures{
     list-style-type: disc;
+  }
+  .houses-slice__characteristics1 {
+    width: 45%;
   }
   .houses-slice__measures li{
     list-style: none;
@@ -250,6 +253,7 @@ onMounted(async () => {
   .houses-slice__richText{
     display: flex;
     flex-direction: row;
+    justify-content: space-between
   }
   .houses-slice__characteristics p{
     font-family: 'Mirage Regular';
@@ -274,13 +278,13 @@ onMounted(async () => {
   }
   .houses-slice__characteristics li::before{
     content: "";
-    position: relative;
-    display: block;
+    display: inline-block;
     width: 6px;
     height: 6px;
     background-color: #949769;
-    margin-right: 8px;
-    margin-top: 11px;
+    padding-right: 8px;
+    margin-top: 8px;
+    margin-right: 3px;
   }
   .houses-slice__prices-first{
     font-size: 24px;

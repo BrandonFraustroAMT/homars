@@ -142,7 +142,6 @@ defineComponent({
       </div>
       <div id="triggerUbicationMap" class="ubication-slice__right" ref="triggerUbicationMap">
         <div class="ubication-slice__map" >
-=======
           <!-- imagen mapa -->
             <LMap
               ref="map"
@@ -160,7 +159,6 @@ defineComponent({
                 <LPopup> Homars! </LPopup>
               </LMarker>
             </LMap>
->>>>>>> e54c599 (perf: improve map optimization)
         </div>
       </div>
     </div>
@@ -300,13 +298,6 @@ defineComponent({
     transform: none;
   }
   .ubication-slice__map{
-<<<<<<< HEAD
-    position: relative;
-    z-index: 1;
-  }
-  .ubication-slice__map img{
-=======
->>>>>>> e54c599 (perf: improve map optimization)
     width: 100%;
     height: 400px;
   }
